@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> zoo </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+
+    <header class="header">
+
+        <a href="#" class="logo"> <i class="fas fa-paw"></i> zoo</a>
+
+        <nav class="navbar">
+            <a href="index.html">home</a>
+            <a href="about-us.html">about</a>
+            <a href="animal.html">animal</a>
+            <a href="pricing.html">pricing</a>
+            <a href="Members.html">Members</a>
+            <a href="contact.html">contact</a>
+        </nav>
+
+        <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+    </header>
+
+    <section class="pricing" id="pricing">
+        <h1 class="heading" style="margin-top: 100px;"> Team Members </h1>
+        <div class="box-container">
+            <div class="box">
+                <ul id="members-list" style="font-size: 20px; color: #91450b;">
+                    <li type="none">هياء صالح الرشيدي </li>
+                    <li type="none"> ارام ابراهيم البلوي</li>
+                    <li type="none"> رهف سالم الحويطي</li>
+                    <li type="none"> فاطمه سعود العنزي</li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const membersList = document.getElementById('members-list');
+
+            function Reorder_randomly() {
+                for (let i = membersList.children.length; i >= 0; i--) {
+                    membersList.appendChild(membersList.children[Math.random() * i | 0]);
+                }
+            }
+
+            Reorder_randomly();
+
+        });
+    </script>
+
+</body>
+
+</html>
